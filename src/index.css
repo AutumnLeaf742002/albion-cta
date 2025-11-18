@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* *{
+  border: 2px solid white;
+} */
+
+html, body {
+  overflow-x: hidden;
+}
+
+:root {
+  /* 🎯 Colores de fondo */
+  --color-background: #0f0f0f;
+  /* Fondo general de la página */
+  --color-surface: #1a1a1a;
+  /* Contenedores o tarjetas */
+  --color-surface-alt: #232323;
+  /* Variante para hover o alternancia */
+
+  /* ✍️ Colores de texto */
+  --color-text-title: #ffffff;
+  /* Títulos */
+  --color-text-body: #dcdcdc;
+  /* Texto principal */
+  --color-text-muted: #8a8a8a;
+  /* Texto secundario o deshabilitado */
+
+  /* 🧭 Colores primarios */
+  --color-primary: #c026d3;
+  /* Morado brillante para botones y acentos */
+  --color-primary-hover: #a21caf;
+  /* Hover para botones primarios */
+  --color-primary-text: #ffffff;
+  /* Texto en botones primarios */
+
+  /* 🛡️ Colores secundarios / informativos */
+  --color-secondary: #0ea5e9;
+  /* Azul para enlaces o info */
+  --color-secondary-hover: #0284c7;
+  --color-secondary-text: #ffffff;
+
+  /* ✅ Estado: éxito */
+  --color-success: #22c55e;
+  --color-success-text: #ffffff;
+
+  /* ❌ Estado: error / peligro */
+  --color-danger: #ef4444;
+  --color-danger-hover: #dc2626;
+  --color-danger-text: #ffffff;
+
+  /* ⚪ Bordes y divisores */
+  --color-border: #2e2e2e;
+  /* Líneas suaves entre elementos */
+}
