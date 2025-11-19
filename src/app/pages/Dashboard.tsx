@@ -8,6 +8,10 @@ export const Dashboard = () => {
             <Text>
                 Dashboard
                 <Hr />
+                <Hr />
+                <Hr />
+                <Hr />
+                <Hr />
             </Text>
         </AppLayout>
     )
