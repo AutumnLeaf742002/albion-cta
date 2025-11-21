@@ -16,7 +16,7 @@ export const LogoText = ({ className }: Props) => {
 
     return (
         <span className="flex cursor-pointer"  onClick={goHome}>
-            <Title className={`text-2xl font-bold ${className}`}>
+            <Title className={`text-lg md:text-2xl font-bold flex gap-1 ${className}`}>
                 Albion
                 <span className="text-(--color-primary)">
                     CTA
