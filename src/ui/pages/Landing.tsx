@@ -9,14 +9,9 @@ export const Landing = () => {
 
     const navigate = useNavigate()
 
-    const goLogin = () => {
+    const navTo = (to: string) => {
 
-        navigate("/auth/login")
-    }
-
-    const goRegister = () => {
-
-        navigate("/auth/register")
+        navigate(to)
     }
 
     return (
@@ -27,8 +22,8 @@ export const Landing = () => {
                 <LogoText />
 
                 <span className="flex gap-4">
-                    <ButtonDefault callback={goLogin} text="Iniciar sesion" />
-                    <ButtonPrimary callback={goRegister} text="Registrarse" />
+                    <ButtonDefault callback={()=>navTo("/auth/login")} text="Iniciar sesion" />
+                    <ButtonPrimary callback={()=>navTo("/auth/register")} text="Registrarse" />
                 </span>
             </header>
             {/* header section */}
@@ -50,7 +45,7 @@ export const Landing = () => {
                         </Text>
                     </div>
                     <div>
-                        <ButtonPrimary text="Comenzar ahora" callback={goRegister} />
+                        <ButtonPrimary text="Comenzar ahora" callback={()=>navTo("/app")} />
                     </div>
                 </div>
 
