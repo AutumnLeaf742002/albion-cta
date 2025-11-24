@@ -1,14 +1,18 @@
 import { useState } from "react"
 
 import { Header, Menu } from "../components"
+import { useDevice } from "../../ui/hooks"
 
 interface Props {
+
     children: React.ReactNode
 }
 
 export const AppLayout = ({ children }: Props) => {
 
-    const [expand, setExpand] = useState(false)
+    const device = useDevice()
+
+    const [expand, setExpand] = useState(device)
 
     const toggleExpand = () => {
         

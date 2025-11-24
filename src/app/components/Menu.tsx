@@ -2,12 +2,14 @@ import { LogoText } from '../../ui/components';
 import { MenuItem } from './MenuItem';
 
 interface Props {
-    expand: boolean
+    expand: boolean | undefined
 }
 
 export const Menu = ({expand = true}: Props) => {
 
     const styleExpanded = expand ? "w-40 md:w-54" : "w-0"
+
+    // console.log(expand)
 
     return (
         <aside className="flex absolute md:relative h-full">

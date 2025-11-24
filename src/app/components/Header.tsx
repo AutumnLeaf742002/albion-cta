@@ -3,7 +3,7 @@ import { Text, TextMuted } from "../../ui/components"
 
 interface Props {
     toggleExpand: () => void,
-    expand: boolean
+    expand: boolean | undefined
 }
 
 export const Header = ({ toggleExpand, expand }: Props) => {
