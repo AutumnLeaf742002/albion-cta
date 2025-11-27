@@ -9,7 +9,8 @@ export const Schema = z.object({
         .min(1, "Ingresa un correo"),
 
     password: z.string("Ingresa una contraseña").
-        min(2, "Minimo 2 caracteres"),
+        min(3, "Minimo 3 caracteres")
+        .max(16, "Maximo 16 caracteres"),
 
     rol: z.string()
         .nonempty("Seleccione un rol")

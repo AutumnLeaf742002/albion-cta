@@ -38,6 +38,7 @@ export const Register = () => {
                             { value: 2, text: "Healer" },
                             { value: 3, text: "Dps", default: true },
                             { value: 4, text: "Soporte" },
+                            { value: 5, text: "Montura de batalla" }
                         ]} name="rol" register={register} error={errors.rol?.message} />
 
                     </div>
