@@ -80,12 +80,11 @@ Los miembros pueden:
 cd frontend
 npm install
 npm run dev
-```bash
+```
 
 ### Backend
-```bash
+``` bash
 cd backend
 npm install
 npx prisma migrate dev
 npm run dev
-```bash
