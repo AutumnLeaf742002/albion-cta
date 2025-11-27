@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Albion CTA — Guild Event Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web para gestionar eventos de una guild en **Albion Online**, permitiendo a los líderes crear eventos, asignar roles y establecer límites para cada uno. Los miembros pueden ver eventos, unirse y seleccionar su rol disponible.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características principales
 
-## React Compiler
+### 👑 Roles internos del sitio
+- **Leader**
+- **Officers**
+- **Members**
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Estos roles controlan permisos dentro del sitio, como crear eventos, gestionar roles o participar en ellos.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎯 Gestión de eventos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Cada evento puede tener:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Título y descripción  
+- Fecha y hora  
+- Roles disponibles  
+- Límite por cada rol  
+- Lista de participantes asignados a un rol  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Los miembros pueden:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Ver próximos eventos  
+- Unirse y elegir su rol dentro del límite permitido  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧱 Estructura del proyecto
+
+### Frontend
+- React + Vite  
+- TailwindCSS  
+- Componentes organizados en `/src/components`  
+- Manejo de formularios con React Hook Form  
+- Validación con Zod  
+- Ruteo con `react-router-dom`  
+- Store global (Redux o equivalente)
+
+### Backend
+- Node.js + Express  
+- Validación con `express-validator`  
+- Base de datos **MySQL**  
+- **Prisma ORM**  
+- Configuración CORS básica  
+
+---
+
+## 📁 Funcionalidades implementadas
+
+- Creación y edición de eventos por líderes u oficiales  
+- Filtrado y vista de eventos para los miembros  
+- Registro de participante por rol  
+- Límite dinámico de cada rol  
+- Sistema de roles interno del sitio  
+- API REST conectando frontend y backend  
+
+---
+
+## 🗂 Roadmap
+
+- Autenticación con JWT  
+- Dashboard con estadísticas  
+- Mejoras en UI/UX  
+- Notificaciones en tiempo real (posible uso de websockets)  
+- Optimización del sistema de roles  
+
+---
+
+## 🛠 Instalación
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```bash
+
+### Backend
+```bash
+cd backend
+npm install
+npx prisma migrate dev
+npm run dev
+```bash
