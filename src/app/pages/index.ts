@@ -1,2 +1,5 @@
 export * from "./Dashboard"
-export * from "./CtasActives"
+export * from "./Cta"
+export * from "./Guild"
+export * from "./SearchGuild"
+export * from "./Profile"

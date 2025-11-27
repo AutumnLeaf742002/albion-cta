@@ -5,11 +5,9 @@ interface Props {
     expand: boolean | undefined
 }
 
-export const Menu = ({expand = true}: Props) => {
+export const Menu = ({ expand = true }: Props) => {
 
     const styleExpanded = expand ? "w-40 md:w-54" : "w-0"
-
-    // console.log(expand)
 
     return (
         <aside className="flex absolute md:relative h-full">
@@ -21,9 +19,10 @@ export const Menu = ({expand = true}: Props) => {
 
                 <ul className='flex flex-col gap-2 p-4 text-nowrap'>
                     <MenuItem text="Resumen" path="/app/dashboard" />
-                    <MenuItem text="CTA activas" path="/nothing" />
-                    <MenuItem text="Historial" path="/nothing" />
-                    <MenuItem text="Configuracion" path="/nothing" />
+                    <MenuItem text="Cta" path="/app/cta" />
+                    <MenuItem text="Gremio" path="/app/guild" />
+                    <MenuItem text="Buscar gremio" path="/app/search-guild" />
+                    <MenuItem text="Perfil" path="/app/profile" />
                 </ul>
 
             </menu>
