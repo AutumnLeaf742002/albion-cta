@@ -28,7 +28,7 @@ export const AppLayout = ({ children }: Props) => {
 
                 <Header toggleExpand={toggleExpand} expand={expand} />
 
-                <div className="p-4 md:px-8">
+                <div className="p-4 md:px-8 overflow-hidden">
                     {children}
                 </div>
             </div>

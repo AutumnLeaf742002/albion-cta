@@ -8,6 +8,11 @@ html, body {
   overflow-x: hidden;
 }
 
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
 :root {
   /* 🎯 Colores de fondo */
   --color-background: #0f0f0f;
