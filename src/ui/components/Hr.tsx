@@ -1,5 +1,5 @@
-export const Hr = () => {
+export const Hr = ({ className }: {className: string}) => {
     return (
-        <hr className="text-(--color-border)" />
+        <hr className={`text-(--color-border) ${className}`} />
     )
 }

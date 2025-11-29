@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router"
 
-import { Profile, Dashboard, Cta, Guild, SearchGuild } from '../pages'
+import { Profile, Dashboard, Cta, Guild, SearchGuild, CtaView } from '../pages'
 
 export const AppRoutes = () => {
     return (
@@ -8,6 +8,7 @@ export const AppRoutes = () => {
             <Route path="/*" element={ <Navigate to="/app/dashboard" /> } />
             <Route path="/dashboard" element={ <Dashboard /> } />
             <Route path="/cta" element={ <Cta /> } />
+            <Route path="/cta/:id" element={ <CtaView /> } />
             <Route path="/guild" element={ <Guild /> } />
             <Route path="/search-guild" element={ <SearchGuild /> } />
             <Route path="/profile" element={ <Profile /> } />
