@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-import type { Build } from "../interfaces";
+import type { CtaBuild } from "../interfaces";
 
 interface Props {
-    build: Build[]
+    build: CtaBuild[]
 }
 
 export const CtaBuildList = ({ build }: Props) => {
@@ -15,17 +15,17 @@ export const CtaBuildList = ({ build }: Props) => {
             <div className="mt-3 flex flex-col gap-3">
                 {build.map((b) => (
                     <div
-                        key={b.uid}
+                        key={b.build_uid}
                         className="flex items-center justify-between bg-(--color-surface-alt) p-3 rounded-lg"
                     >
                         <div className="flex flex-col">
-                            <span className="font-semibold text-(--color-text-title)">{b.name}</span>
+                            <span className="font-semibold text-(--color-text-title)">{b.name} - {b.member ?? ""}</span>
                             <span className="text-sm text-(--color-text-muted)">{b.role}</span>
                         </div>
 
                         {/* Luego pondrás botón de unirse */}
                         <NavLink
-                            to={`/app/builds/${b.uid}`}
+                            to={`/app/builds/${b.build_uid}`}
                             className="px-3 py-1 rounded bg-(--color-primary)/50 text-(--color-primary-text) text-sm hover:bg-(--color-primary-hover) font-semibold"
                         >
                             Ver build

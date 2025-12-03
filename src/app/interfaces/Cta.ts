@@ -1,4 +1,4 @@
-import type { Build } from "./Build"
+import type { CtaBuild } from "./CtaBuild"
 
 export interface Cta {
     uid: string,
@@ -10,5 +10,5 @@ export interface Cta {
     end: string,
     objetive: string,
     notes: string
-    builds?: Build[]
+    builds?: CtaBuild[]
 }

@@ -18,12 +18,11 @@ const cta: Cta = {
     objetive: "Limpiar zonas Avalonianas y capturar 2 energías.",
     notes: "Traer comida de resistencia. No se acepta gear 4.1.",
     builds: [
-        { uid: "1", name: "Tank Mazo", role: "Tank" },
-        { uid: "2", name: "Arcane Support", role: "Support" },
-        { uid: "3", name: "Fire DPS", role: "DPS" },
+        { slot_id: 1, build_uid: "1", name: "Tank Mazo", role: "Tank", member: "Alex" },
+        { slot_id: 2, build_uid: "2", name: "Arcane Support", role: "Support", member: "Esther" },
+        { slot_id: 3, build_uid: "3", name: "Fire DPS", role: "DPS", member: "Roberto" },
     ],
 }
-
 
 export const CtaView = () => {
     // const { id } = useParams();
@@ -36,7 +35,7 @@ export const CtaView = () => {
 
                 <CtaDescription objetive={cta.objetive} notes={cta.notes} />
 
-                <CtaBuildList builds={cta.builds} />
+                <CtaBuildList build={cta.builds ?? []} />
 
             </div>
         </AppLayout>
