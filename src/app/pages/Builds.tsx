@@ -1,11 +1,11 @@
-import { Text } from "../../ui/components"
 import { AppLayout } from "../layout/AppLayout"
+import { Text } from '../../ui/components/Text';
 
-export const Guild = () => {
+export const Builds = () => {
     return (
         <AppLayout>
             <Text>
-                Gremio
+                Builds
             </Text>
         </AppLayout>
     )
