@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router"
 
-import { Profile, Dashboard, Cta, Guild, SearchGuild, CtaView, Builds, BuildView, GuildView } from '../pages'
+import { Profile, Dashboard, Cta, Guild, SearchGuild, CtaView, Builds, BuildView, GuildView, Member } from '../pages'
 
 export const AppRoutes = () => {
     return (
@@ -15,6 +15,7 @@ export const AppRoutes = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/builds" element={<Builds />} />
             <Route path="/builds/:id" element={<BuildView />} />
+            <Route path="/guild/member/:id" element={<Member />} />
         </Routes>
     )
 }
