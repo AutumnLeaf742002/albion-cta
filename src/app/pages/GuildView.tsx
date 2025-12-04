@@ -1,11 +1,15 @@
+import { useParams } from "react-router-dom"
 import { Text } from "../../ui/components"
 import { AppLayout } from "../layout/AppLayout"
 
-export const Guild = () => {
+export const GuildView = () => {
+
+    const {id} = useParams()
+
     return (
         <AppLayout>
             <Text>
-                Gremio
+                {id}
             </Text>
         </AppLayout>
     )

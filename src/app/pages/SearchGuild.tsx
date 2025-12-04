@@ -6,7 +6,7 @@ export const SearchGuild = () => {
     return (
         <AppLayout>
             <Text>
-                Cta
+                Buscan gremio
             </Text>
         </AppLayout>
     )

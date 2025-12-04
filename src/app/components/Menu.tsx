@@ -22,6 +22,7 @@ export const Menu = ({ expand = true }: Props) => {
                     <MenuItem text="Cta" path="/app/cta" />
                     <MenuItem text="Gremio" path="/app/guild" />
                     <MenuItem text="Buscar gremio" path="/app/search-guild" />
+                    <MenuItem text="Builds" path="/app/builds" />
                     <MenuItem text="Perfil" path="/app/profile" />
                 </ul>
 
