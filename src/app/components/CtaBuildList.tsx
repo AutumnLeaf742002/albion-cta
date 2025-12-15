@@ -23,13 +23,18 @@ export const CtaBuildList = ({ build }: Props) => {
                             <span className="text-sm text-(--color-text-muted)">{b.role}</span>
                         </div>
 
-                        {/* Luego pondrás botón de unirse */}
-                        <NavLink
-                            to={`/app/builds/${b.build_uid}`}
-                            className="px-3 py-1 rounded bg-(--color-primary)/50 text-(--color-primary-text) text-sm hover:bg-(--color-primary-hover) font-semibold"
-                        >
-                            Ver build
-                        </NavLink>
+                        <div className="flex gap-2">
+                            <button className="w-14 py-1 text-center rounded font-semibold bg-green-700 text-white cursor-pointer hover:bg-green-600 transition text-sm">
+                                Tomar
+                            </button>
+
+                            <NavLink
+                                to={`/app/builds/${b.build_uid}`}
+                                className="px-3 py-1 rounded bg-(--color-primary)/50 text-(--color-primary-text) text-sm hover:bg-(--color-primary-hover) font-semibold transition"
+                            >
+                                Ver build
+                            </NavLink>
+                        </div>
                     </div>
                 ))}
             </div>
