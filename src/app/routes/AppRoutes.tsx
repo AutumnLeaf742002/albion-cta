@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router"
 
-import { Profile, Dashboard, Cta, Guild, SearchGuild, CtaView, Builds, BuildView, GuildView, Member } from '../pages'
+import { Profile, Dashboard, Cta, Guild, SearchGuild, CtaView, Builds, BuildView, GuildView, Member, ProfileEdit } from '../pages'
 
 export const AppRoutes = () => {
     return (
@@ -13,6 +13,7 @@ export const AppRoutes = () => {
             <Route path="/guild/:id" element={<GuildView />} />
             <Route path="/search-guild" element={<SearchGuild />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/edit" element={<ProfileEdit />} />
             <Route path="/builds" element={<Builds />} />
             <Route path="/builds/:id" element={<BuildView />} />
             <Route path="/guild/member/:id" element={<Member />} />

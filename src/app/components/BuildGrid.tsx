@@ -42,16 +42,19 @@ export const BuildGrid = () => {
 
     const [rolFilter, setRolFilter] = useState<string>("5")
 
-    const onSelectChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
+    const onSelectChange = async (e:React.ChangeEvent<HTMLSelectElement>) => {
 
         setRolFilter(e.currentTarget.value)
     }
 
-    console.log(rolFilter)
+    const onFilter = () => {
+
+        console.log(rolFilter)
+    }
 
     return (
         <div>
-            <span className='flex gap-1 my-4'>
+            <span className='flex gap-2 my-4'>
                 <Text>
                     Rol -
                 </Text>
@@ -64,6 +67,12 @@ export const BuildGrid = () => {
                     <option value="3">Support</option>
                     <option value="4">Montura</option>
                 </select>
+
+                <button className='text-(--color-text-body) bg-(--color-primary) px-3 py-1 rounded cursor-pointer font-semibold hover:bg-(--color-primary-hover) transition text-sm'
+                    onClick={onFilter}
+                >
+                    Aplicar
+                </button>
             </span>
 
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
